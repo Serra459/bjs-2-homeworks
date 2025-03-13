@@ -75,12 +75,11 @@ describe('Домашнее задание к лекции 5 «Классы»', (
   });
 
   describe('Задача №2', () => {
-    let library, printItem, printItemTwo;
+    let library, printItem;
   
     beforeEach(function(){
       library = new Library('Библиотека имени Ленина');
       printItem = new PrintEditionItem('Типовой школьный журнал', 2019, 102);
-      printItemTwo = new PrintEditionItem('Журнал', 2020, 88);
     });
 
     it('создание библиотеки', () => {
@@ -112,12 +111,6 @@ describe('Домашнее задание к лекции 5 «Классы»', (
       expect(library.books.length).toEqual(0);
       const secondBook = library.giveBookByName('Судовой журнал');
       expect(secondBook).toEqual(null);
-    });
-
-    it('тест библиотека', () => {
-      library.addBook(printItem);
-      library.addBook(printItemTwo);
-
     });
   })
 });
